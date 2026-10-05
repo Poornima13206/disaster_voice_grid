@@ -1,0 +1,14 @@
+{
+"appName":"Disaster Voice Grid",
+"tagline":"Report floods, rescues, and emergencies using your voice. Available in 10+ Indian languages.",
+"fileReport":"File a Report","controlRoom":"Control Room Dashboard","reportTitle":"File a Voice Report","language":"Language",
+"tapToRecord":"Tap to record","recording":"Recording…","stop":"Stop","uploading":"Uploading…","processing":"Processing…",
+"reportReceived":"Your report has been received. We will send help soon.","reportId":"Report ID",
+"errorGeneric":"Something went wrong","tryAgain":"Try again","micDenied":"Microphone access was denied or is unavailable.","newReport":"New report",
+"feedbackMessage":"Your report has been received. A volunteer has been assigned. Please stay safe and avoid moving water.",
+"all":"All","status":"Status","issueType":"Issue type","urgency":"Urgency","verify":"Verify","assign":"Assign","resolve":"Resolve",
+"teamName":"Team name","reports":"Reports","peopleAtRisk":"People at risk","back":"Back","noIncidents":"No incidents found","assignedTo":"Assigned to","summary":"Summary",
+"s_new":"New","s_verified":"Verified","s_assigned":"Assigned","s_resolved":"Resolved",
+"i_rescue":"Rescue","i_medical":"Medical","i_food":"Food","i_shelter":"Shelter","i_road":"Road","i_missing":"Missing person",
+"u_low":"Low","u_medium":"Medium","u_high":"High"
+}

@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Report {
+  id                String    @id @default(uuid())
+  callerId          String?
+  audioUrl          String?
+  language          String
+  transcriptLocal   String?
+  transcriptEn      String?
+  structuredData    Json?
+  incidentId        String?
+  incident          Incident? @relation(fields: [incidentId], references: [id])
+  feedbackTextLocal String?
+  feedbackAudioUrl  String?
+  status            String // "new" | "processed" | "feedback_sent"
+  createdAt         DateTime  @default(now())
+}
+
+model Incident {
+  id                String   @id @default(uuid())
+  areaName          String
+  locationText      String
+  lat               Float?
+  lng               Float?
+  issueType         String // rescue | medical | food | shelter | road | missing
+  maxUrgency        String // low | medium | high
+  totalReports      Int      @default(0)
+  peopleAtRiskTotal Int      @default(0)
+  vulnerableGroups  Json?
+  resourcesNeeded   Json?
+  status            String // new | verified | assigned | resolved
+  assignedToTeam    String?
+  reports           Report[]
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
